@@ -1,6 +1,6 @@
 import {test,expect} from "@playwright/test";
 
-test.only('tracing test', async({page})=>{
+test('tracing test', async({page})=>{
 
 
 await page.goto('https://www.demoblaze.com/index.html'); 

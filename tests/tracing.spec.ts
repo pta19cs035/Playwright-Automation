@@ -12,7 +12,7 @@ await expect (page.locator ('#nameofuser')).toContainText('Welcome pavanol');
 
 })
 
-test.only('tracing test', async({page,context})=>{
+test('tracing test', async({page,context})=>{
 
 context.tracing.start({screenshots:true,snapshots:true});
 await page.goto('https://www.demoblaze.com/index.html'); 

@@ -20,7 +20,7 @@ test("Screenshot",async({page})=>{
 })
 
 
-test.only('screenshots from config', async ({page})=>{
+test('screenshots from config', async ({page})=>{
 
 await page.goto('https://www.demoblaze.com/index.html'); 
 await page.getByRole('link', { name: 'Log in' }).click(); 

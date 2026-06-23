@@ -39,7 +39,7 @@ test("Confirmation Dialogue",async({page})=>{
 
 })
 
-test.only("Prompt Dialogue",async({page})=>{
+test("Prompt Dialogue",async({page})=>{
     await page .goto("https://testautomationpractice.blogspot.com/");
     //dialog Handler
     page.on('dialog',(dialog)=>{
