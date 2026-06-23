@@ -1,0 +1,44 @@
+import {test,expect} from "@playwright/test";
+
+//testdata
+const searchItems:string[]=['laptop','Gift card','smartphone','monitor'];
+
+//using for loop
+
+/*for(const item of searchItems){
+test(`search- test ${item}`, async ({page}) =>{
+await page.goto('https://demowebshop.tricentis.com/');
+await page.locator ('#small-searchterms').fill(item); // fill teh text in search box await page. locator ("input[value='Search']").click(); // click on the button
+await page.locator ("input[value='Search']").click();
+await expect.soft (page.locator('h2 a').nth(0)).toContainText (item,{ignoreCase: true }); // check if result
+
+});
+} 
+*/
+
+//using forEach function
+ /*searchItems.forEach((item)=>{
+    test(`search- test ${item}`, async ({page}) =>{
+await page.goto('https://demowebshop.tricentis.com/');
+await page.locator ('#small-searchterms').fill(item); // fill teh text in search box await page. locator ("input[value='Search']").click(); // click on the button
+await page.locator ("input[value='Search']").click();
+await expect.soft (page.locator('h2 a').nth(0)).toContainText (item,{ignoreCase: true }); // check if result
+
+});
+    
+ })
+*/
+
+ //describe
+ test.describe("Searching",async()=>{
+    searchItems.forEach((item)=>{
+    test(`search- test ${item}`, async ({page}) =>{
+await page.goto('https://demowebshop.tricentis.com/');
+await page.locator ('#small-searchterms').fill(item); // fill teh text in search box await page. locator ("input[value='Search']").click(); // click on the button
+await page.locator ("input[value='Search']").click();
+await expect.soft (page.locator('h2 a').nth(0)).toContainText (item,{ignoreCase: true }); // check if result
+
+});
+    
+ })
+ })
