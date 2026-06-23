@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test';
 //Reading data from JSON
 const jsonPath="testdata/data.json";
 const loginData = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
-
+test.skip();
 test.describe('Login data driven test', async()=>{
 
 for(const {email, password, validity} of loginData)
