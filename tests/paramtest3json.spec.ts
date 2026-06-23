@@ -7,7 +7,7 @@ const loginData = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
 
 test.describe('Login data driven test', async()=>{
 
-for(const {email, password, validity} of loginData)
+for(const [email, password, validity] of loginData)
 {
 test.skip(`Login test for ${email} and ${password}`, async({page})=>{
 await page.goto('https://demowebshop.tricentis.com/login');
