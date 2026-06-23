@@ -35,14 +35,14 @@ test("Date Picker",async({page})=>{
     await expect(dateInput).toBeVisible();
 
     //Approach 1-fill() method
-    dateInput.fill("01/03/2003");
+    await dateInput.fill("01/03/2003");
     //Approach 2-using datepicker
     dateInput.click();//opens the date picker
     //select target date
-    const year='2021';
+    const year='2027';
     const month='June';
     const date="25";
-    selectDate(year,month,date,page,false);
+    await selectDate(year,month,date,page,false);
 
     const expectedDate='06/25/2027';
     await expect(dateInput).toHaveValue(expectedDate);
